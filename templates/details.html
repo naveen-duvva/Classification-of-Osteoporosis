@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://images.drlogy.com/assets/uploads/img/practice-profile/hospitals/gallery/51a93946a223bd4a74edf19985c21c63.png" type="image/x-icon">
+    <title>Details Page</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <a href="{{url_for('index')}}" class="navbar-brand mb-0 h1">
+         <img class="d-inline-block align-top rounded-circle" src="/static/images/osteo.jpg" alt="img" height="30px" width="30px"> 
+         Osteoporosis
+        </a>
+        <button 
+        type="button"
+        data-bs-toggle = "collapse"
+        data-bs-target = "#navbarNav"
+        class="navbar-toggler"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggel Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="{{url_for('index')}}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="{{url_for('about')}}" class="nav-link">About</a>
+            </li>
+            <li class="nav-item active">
+              <a href="{{url_for('details')}}" class="nav-link">Details</a>
+            </li>
+          </ul>
+
+        </div>
+    </nav>
+    <div class="heading text-center mt-5">
+      <div class="h1">INTELLIGENT APPROACH FOR CLASSIFICATION OF <span class="text-primary">OSTEOPOROSIS</span></div>
+    </div>
+    <div class="details">
+        <ul>
+            <li><div class="h6">About this project</div>
+                <ul>
+                    <li>This project aims to develop an intelligent approach for the classification of osteoporosis using deep learning techniques. We use a convolutional neural network (CNN) to train our model on a dataset of bone X-ray images, and then use the trained model to classify new X-ray images into different categories based on their severity of osteoporosis.</li>
+                </ul>
+            </li>
+            <li><div class="h6">Dataset</div>
+                <ul>
+                    <li>The dataset used for this project consists of bone X-ray images of different patients, categorized into 5 classes based on their severity of osteoporosis: Normal, Doubtful, Mild, Moderate, and Severe.</li>
+                    <li>The dataset is preprocessed and cleaned before being used for training the CNN model.</li>
+                    <li>Number of images Used : <b>3671</b></li>
+                    <li>Number of images used to train model : <b>3303</b></li>
+                    <li>Number of images used to test model : <b>368</b></li>
+                    <li>Number of Classes
+                        <ul>
+                            <li>Normal</li>
+                            <li>Doubtful</li>
+                            <li>Mild</li>
+                            <li>Moderate</li>
+                            <li>Severe</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="https://data.mendeley.com/datasets/t9ndx37v5h/1" target="_blank" class="btn rounded text-white mt-3 mb-2">Browse the dataset</a>
+                <a href="" target="_blank" class="btn text-white rounded mt-3 mb-2">Get the Dataset</a>
+            </li>
+            <li><div class="h6">Model</div>
+                <ul>
+                    <li>Model We use a CNN model built using the Keras library in Python.</li>
+                    <li>The model architecture consists of 3 convolutional layers, each followed by a ReLU activation and max-pooling layers, and 2 dense layers.</li>
+                    <li>The final layer is a softmax activation layer that outputs the predicted class probabilities.</li>
+                    <li>We train the model on the preprocessed dataset using the categorical cross-entropy loss function and the Adam optimizer.</li>
+                    <li>We use a validation set to monitor the model's performance during training and apply dropout regularization to prevent overfitting.</li>
+                </ul>
+            </li>
+            <li><div class="h6">Evaluation</div>
+                <ul>
+                    <li>We evaluate the trained model on a separate test dataset and report the accuracy of the model on the test set.</li>
+                    <li>We also generate a confusion matrix to visualize the classification performance of the model.</li>
+                </ul>
+            </li>
+            <li><div class="h6">Deployment</div>
+                <ul>
+                    <li>To use the trained model for predicting the class of new X-ray images, we provide a sample code to load the model from the saved .h5 file and process new images to obtain the predicted class.</li>
+                </ul>
+            </li>
+
+        </ul>
+        <a href="" target="_blank" class="btn rounded text-white mt-2">Download the project</a>
+    </div>
+    <!-- <script src="/static/js/script.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

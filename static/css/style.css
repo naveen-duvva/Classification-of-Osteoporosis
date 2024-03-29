@@ -1,0 +1,77 @@
+.btn{
+    background-color: #003366;
+}
+.linkedinlinks{
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: #198754;
+    color: black;
+}
+
+.flex-container,.flex-container-about{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.details{
+    padding: 20px;
+}
+.quo{
+    color: blue;
+}
+.intro p{
+    
+    color: #003366;
+    font-size: 1rem;
+    text-indent: 40px;
+}
+.infor{
+    font-size: 1em;
+    text-indent: 40px;
+}
+.quo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.flex-container-about.left{
+    padding: 10px;
+}
+#uploadImage{
+    padding: 25px;
+}
+.left{
+    flex: 1;
+    padding: 20px;
+    margin: auto;
+    
+}
+
+.right img{
+    flex: 1;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    
+    
+}
+.ans{
+    padding: 15px;
+}
+
+
+@media (max-width: 768px){
+    .left, .right{
+        flex: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .left, .right{
+        flex: 1;
+    }
+}
